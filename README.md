@@ -23,6 +23,10 @@ Recommended method using pipx:
 pipx install git+https://github.com/Vaspyyy/puny-manager.git
 ```
 ## Usage
+Change language:
+```bash
+puny-manager lang {en, de}
+```
 
 Initialize a new vault:
 ```bash
@@ -44,6 +48,6 @@ puny-manager get <name>
 ```
 Generate a new password:
 ```bash
-puny-manager gen
+puny-manager gen]
 ```
 
