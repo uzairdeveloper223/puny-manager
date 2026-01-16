@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "puny-manager"
+version = "1.0.0"
+description = "Puny Manager – minimaler, verschlüsselter Passwortmanager"
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography",
+]
+
+[project.scripts]
+puny-manager = "puny.cli:main"
+
