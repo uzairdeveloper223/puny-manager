@@ -3,16 +3,17 @@ install via
 pipx install git+https://github.com/Vaspyyy/puny-manager.git
 
 
-usage: puny [-h] {init,list,add,get} ...
+usage: puny-manager
 
-Puny Manager – minimaler Passwortmanager
+init        -       makes a new vault
 
-positional arguments:
-  {init,list,add,get}
-    init               makes a new vault
-    list               lists entries
-    add                adds an entry
-    get                shows entry and password
+list         -      lists entries
+
+add           -     adds an entry
+
+get            -    shows entry and password
 
 options:
+
   -h, --help           show this help message and exit
+
