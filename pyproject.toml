@@ -9,6 +9,7 @@ description = "Puny Manager – minimaler, verschlüsselter Passwortmanager"
 requires-python = ">=3.10"
 dependencies = [
     "cryptography",
+    "pyperclip",
 ]
 
 [project.scripts]

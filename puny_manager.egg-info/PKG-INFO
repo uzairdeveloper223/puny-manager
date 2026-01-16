@@ -4,3 +4,4 @@ Version: 1.0.0
 Summary: Puny Manager – minimaler, verschlüsselter Passwortmanager
 Requires-Python: >=3.10
 Requires-Dist: cryptography
+Requires-Dist: pyperclip

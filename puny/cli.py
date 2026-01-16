@@ -1,5 +1,7 @@
 
 import argparse
+import pyperclip
+
 from getpass import getpass
 
 from .vault import init_vault
@@ -26,6 +28,11 @@ def main():
 
     get_parser = subparsers.add_parser("get", help="Zeigt einen Eintrag")
     get_parser.add_argument("name", help="Name des Eintrags")
+    get_parser.add_argument(
+            "--copy",
+            action="store_true",
+            help="Kopiert das Password in die Zwischenablage"
+    )
 
 
     gen_parser = subparsers.add_parser("gen", help="Generiert ein sicheres Passwort")
@@ -84,7 +91,12 @@ def main():
             entry = get_entry(master, args.name)
             print(f"Name: {entry['name']}")
             print(f"Username: {entry['username']}")
-            print(f"Passwort: {entry['password']}")
+
+            if args.copy:
+                pyperclip.copy(entry["password"])
+                print("Password wurde in die zwischenablage kopiert")
+            else:
+                print(f"Passwort: {entry['password']}")
         except Exception as e:
             print(f"✗ Fehler: {e}")
 
