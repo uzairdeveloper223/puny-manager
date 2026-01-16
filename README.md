@@ -19,3 +19,24 @@ Recommended method using pipx:
 
 ```bash
 pipx install git+https://github.com/Vaspyyy/puny-manager.git
+```
+## Usage
+
+Initialize a new vault:
+```bash
+puny-manager init
+```
+
+Add a new entry:
+```bash
+puny-manager add
+```
+
+List stored entries:
+```bash
+puny-manager list
+```
+Retrieve an entry:
+```bash
+puny-manager get <name>
+```
