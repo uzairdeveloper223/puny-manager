@@ -9,6 +9,7 @@ from .listing import list_entries
 from .adding import add_entry
 from .getting import get_entry
 from .generator import generate_password
+from .removing import remove_entry
 
 def ask_master_password() -> str:
     return getpass("Master-Passwort: ")
@@ -42,6 +43,15 @@ def main():
             type=int,
             default=20,
             help="Passwordlänge (STandard: 20)"
+    )
+
+    rm_parser = subparsers.add_parser(
+            "rm",
+            help="Entfernt einen Eintrag"
+    )
+    rm_parser.add_argument(
+            "name",
+            help="Name des Eintrags"
     )
 
     args = parser.parse_args()
@@ -105,6 +115,14 @@ def main():
             password = generate_password(args.length)
             print(password)
         except ValueError as e:
+            print(f"✗ Fehler: {e}")
+
+    elif args.command == "rm":
+        master = ask_master_password()
+        try:
+            remove_entry(master, args.name)
+            print(f"✓ Eintrag '{args.name}' entfernt.")
+        except Exception as e:
             print(f"✗ Fehler: {e}")
 
 

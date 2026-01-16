@@ -8,6 +8,7 @@ puny/generator.py
 puny/getting.py
 puny/listing.py
 puny/paths.py
+puny/removing.py
 puny/storage.py
 puny/vault.py
 puny_manager.egg-info/PKG-INFO
