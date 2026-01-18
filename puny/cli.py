@@ -11,6 +11,7 @@ from .getting import get_entry
 from .generator import generate_password
 from .removing import remove_entry
 from .i18n import t
+from .passwd import change_master_password
 
 def ask_master_password() -> str:
     return getpass(t("master_password"))
@@ -27,6 +28,7 @@ def main():
     subparsers.add_parser("init", help=t("cmd_init"))
     subparsers.add_parser("list", help=t("cmd_list"))
     subparsers.add_parser("add", help=t("cmd_add"))
+    subparsers.add_parser("passwd", help=t("cmd_passwd"))
 
     get_parser = subparsers.add_parser("get", help=t("cmd_get"))
     get_parser.add_argument("name", help=t("arg_name"))
@@ -139,6 +141,13 @@ def main():
         cfg.mkdir(parents=True, exist_ok=True)
         get_lang_path().write_text(args.lang)
         print(t("lang_set", lang=args.lang))
+
+    elif args.command == "passwd":
+        try:
+            change_master_password()
+            print(t("vault_updated"))
+        except Exception as e:
+            print(f"{t('error_prefix')}{e}")
 
 
 

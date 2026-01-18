@@ -8,6 +8,7 @@ puny/generator.py
 puny/getting.py
 puny/i18n.py
 puny/listing.py
+puny/passwd.py
 puny/paths.py
 puny/removing.py
 puny/storage.py

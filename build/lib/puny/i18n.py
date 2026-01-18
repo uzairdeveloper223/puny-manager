@@ -41,6 +41,9 @@ STRINGS = {
         "vault_corrupt": "Vault file is corrupted.",
         "vault_decrypt_failed": "Vault could not be decrypted.",
 
+        # edits
+        "vault_updated": "Master password updated.",
+
         # argparse / help
         "cmd_init": "Initialize a new vault",
         "cmd_list": "List entries",
@@ -49,6 +52,7 @@ STRINGS = {
         "cmd_gen": "Generate a secure password",
         "cmd_rm": "Remove an entry",
         "cmd_lang": "Set language",
+        "cmd_passwd": "Change master password",
 
         "arg_name": "Entry name",
         "arg_length": "Password length (default: 20)",
@@ -98,6 +102,10 @@ STRINGS = {
         "vault_corrupt": "Vault-Datei ist beschädigt.",
         "vault_decrypt_failed": "Vault konnte nicht entschlüsselt werden.",
 
+        # edits
+        "vault_updated": "Master-Passwort aktualisiert.",
+
+
         # argparse / help
         "cmd_init": "Neue Vault erstellen",
         "cmd_list": "Einträge auflisten",
@@ -106,6 +114,7 @@ STRINGS = {
         "cmd_gen": "Sicheres Passwort generieren",
         "cmd_rm": "Eintrag entfernen",
         "cmd_lang": "Sprache setzen",
+        "cmd_passwd": "Master Passwort ändern",
 
         "arg_name": "Name des Eintrags",
         "arg_length": "Passwortlänge (Standard: 20)",
