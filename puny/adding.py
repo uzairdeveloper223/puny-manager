@@ -1,7 +1,7 @@
 
 from .storage import load_vault, save_vault
 
-def add_entry(master_password: str, name: str, username: str, password: str) -> None:
+def add_entry(master_password: str, name: str, username: str, password: str, notes: str = "") -> None:
     vault = load_vault(master_password)
 
     for entry in vault["entries"]:
@@ -11,7 +11,8 @@ def add_entry(master_password: str, name: str, username: str, password: str) -> 
     vault["entries"].append({
         "name": name,
         "username": username,
-        "password": password
+        "password": password,
+        "notes": notes
     })
 
     save_vault(master_password, vault)

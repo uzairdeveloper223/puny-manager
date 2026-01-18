@@ -25,6 +25,7 @@ STRINGS = {
 
         # add
         "entry_saved": "Entry '{name}' saved.",
+        "entry_notes": "Notes (optional): ",
 
         # get
         "entry_not_found": "Entry '{name}' not found.",
@@ -90,6 +91,7 @@ STRINGS = {
         # get
         "entry_not_found": "Eintrag '{name}' nicht gefunden.",
         "password_copied": "Passwort wurde in die Zwischenablage kopiert.",
+        "entry_notes": "Notizen (optional): ",
 
         # remove
         "entry_removed": "Eintrag '{name}' entfernt.",

@@ -96,9 +96,10 @@ def main():
         name = input(t("entry_name")).strip()
         username = input(t("entry_username")).strip()
         password = getpass(t("entry_password"))
+        notes = input(t("entry_notes")).strip()
 
         try:
-            add_entry(master, name, username, password)
+            add_entry(master, name, username, password, notes)
             print(t("entry_saved", name=name))
         except Exception as e:
             print(f"{t('error_prefix')}{e}")
@@ -110,6 +111,9 @@ def main():
             entry = get_entry(master, args.name)
             print(f"Name: {entry['name']}")
             print(f"Username: {entry['username']}")
+
+            if entry.get("notes"):                ###############
+                print(f"Notes: {entry['notes']}") ###############
 
             if args.copy:
                 pyperclip.copy(entry["password"])
