@@ -14,6 +14,7 @@ puny/removing.py
 puny/search.py
 puny/storage.py
 puny/vault.py
+puny/version.py
 puny_manager.egg-info/PKG-INFO
 puny_manager.egg-info/SOURCES.txt
 puny_manager.egg-info/dependency_links.txt

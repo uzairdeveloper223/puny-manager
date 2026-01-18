@@ -12,6 +12,7 @@ from .generator import generate_password
 from .removing import remove_entry
 from .i18n import t
 from .passwd import change_master_password
+from .version import get_version
 
 def ask_master_password() -> str:
     return getpass(t("master_password"))
@@ -20,7 +21,13 @@ def ask_master_password() -> str:
 def main():
     parser = argparse.ArgumentParser(
         prog="puny",
-        description="Puny Manager – minimaler Passwortmanager"
+        description="Puny Manager – a minimal password manager"
+    )
+
+    parser.add_argument(
+        "--version",
+        action="version",
+        version=f"%(prog)s {get_version()}",
     )
 
     subparsers = parser.add_subparsers(dest="command", required=True)
